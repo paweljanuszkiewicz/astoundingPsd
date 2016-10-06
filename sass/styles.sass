@@ -7,7 +7,7 @@ body
     font-family: 'Georgia', serif
     border: 0
     margin: 0
-    
+
 .container
     max-width: 960px
     margin: 0 auto
@@ -18,28 +18,28 @@ body
 
 .right
     float: right
-    
+
 .clear-left
     clear: left
-    
+
 .clear-right
     clear: right
 
 .clear-both
     clear: both
-    
+
 .w-225
     width: 225px
     margin-right: 20px
     &:nth-of-type(4)
         margin-right: 0
 
-.light 
+.light
     color: $lightGrey
 
 .center-text
     text-align: center
-    
+
 h1
     +capitals
     margin-top: 60px
@@ -50,7 +50,7 @@ h2
     +caps
     font-size: 28px
     letter-spacing: .06em
-        
+
 a
     color: $blue
     text-decoration: none
@@ -61,7 +61,7 @@ p
     font-size: 13px
     line-height: 1.3em
     letter-spacing: .08em
-   
+
 //hamburger menu
 .hamburger
     display: none
@@ -74,7 +74,7 @@ p
 
 .hamburger div
     top: 42%
-    
+
 .hamburger div, .hamburger div:before, .hamburger div:after
     position: absolute
     width: 40px
@@ -90,7 +90,7 @@ p
 
 .hamburger div:after
     bottom: -12px
-    
+
 .hamburger.active
     div
         background-color: transparent
@@ -106,27 +106,27 @@ p
         display: block
 
 //navigation
-nav 
+nav
     border-top: 5px solid $blue
     height: 125px
     background-color: $black
     color: $white
-    
+
     h2
         margin-top: 38px
-        
+
     ul
         margin-top: 50px
-        
+
     li
         display: inline-block
         margin-left: 1px
         margin-right: 1px
-    
+
     li:last-child
         margin-right: 0
-    
-    a
+
+    a:not(.logo)
         +caps
         color: $white
         font-size: 11px
@@ -139,7 +139,12 @@ nav
 
     p
         font-size: 11px
+.logo
+    display: block
+    color: inherit
 
+.logo:hover
+    text-decoration: none
 //navigation mobile (hamburger)
 @media (max-width: 980px)
     nav
@@ -156,17 +161,17 @@ nav
         li
             display: block
             margin: 0
-        a
+        a:not(.logo)
             display: block
             padding: 20px
             font-size: 18px
             border-radius: 0
-            &:hover, &:active  
+            &:hover, &:active
                 background-color: rgba($blue, .8)
-    
+
     .hamburger
         display: block
-        
+
 //section-1
 .light-border
     border: 1px solid $lineGrey
@@ -174,26 +179,26 @@ nav
 .boxes
     .w-225
         transition: all 400ms ease
-        
+
         &:hover
             background-color: $blue
             cursor: pointer
-        
+
         &:hover > h2, &:hover > p
             color: $white
         &:hover > .image
             background-position: center -121px
-        
+
     h2
         color: $darkGrey
         text-align: center
-        
+
     p
         margin: 22px auto
         max-width: 160px
         text-align: center
         color: $textGrey
-        
+
 
 //section-2 (team)
 .image
@@ -204,7 +209,7 @@ nav
     margin-top: 20px
     margin-bottom: 15px
 
-    
+
 @for $i from 1 through 4
     .image-#{$i}
         background-image: url('../images/st-#{$i}-bg.png')
@@ -218,7 +223,7 @@ figure
         color: $white
         text-align: center
         padding-top: 100px
-        
+
 figcaption
     text-align: center
     color: $darkGrey
@@ -228,7 +233,7 @@ figcaption
 
 .text-right
     text-align: right
-    
+
 .team
     p
         margin-top: 14px
@@ -237,28 +242,28 @@ figcaption
 
     a
         font-size: 13px
-    
+
     a:after
         content: ' >>'
-  
+
 //footer section
 footer
     background-color: $footerGrey
     margin-top: 60px
-    
+
     p
         margin-bottom: 6px
-        
+
     a
         font-size: 13px
-        
+
     li
         padding: 6px
         padding-left: 0
         border-bottom: 1px solid #404040
         & > a:before
             content: '>> '
-     
+
 h3
     font-size: 16px
     color: $white
@@ -287,7 +292,7 @@ a.more:after
 
 p.tweet
     margin-bottom: 20px
-    
+
 textarea, input
     border: 0
     outline: 0
@@ -296,7 +301,7 @@ textarea, input
     background-color: $formsGrey
     color: $textGrey
     font-size: 13px
-    
+
 input[type="submit"]
     +caps
     font-size: 11px
@@ -310,10 +315,10 @@ input[type="submit"]
     &:hover
         background-color: $lightGrey
     margin-bottom: 40px
-    
+
 .copy
     background-color: $copyGrey
-    
+
     p
         padding-top: 25px
         padding-bottom: 25px
@@ -330,18 +335,18 @@ input[type="submit"]
         width: calc(50% - 20px)
         &:nth-of-type(4)
             margin-right: 10px
-        
-    figure > div 
+
+    figure > div
         display: block
         margin: 10px auto
-        
+
     h3
         margin-bottom: 16px
-        
+
     form, input, textarea
         margin: 10px 0 !important
         width: 100% !important
-        
+
 @media (max-width: 620px)
     .container
         padding-left: 10px
@@ -351,18 +356,18 @@ input[type="submit"]
         margin-top: 10px
         margin-bottom: 10px
         width: calc(100% - 20px)
-        
-    figure > div 
+
+    figure > div
         display: block
         margin: 10px auto
-        
+
     h1
         font-size: 80px
-        
+
     h3
         margin-bottom: 16px
-    
-        
+
+
     .copy
         .left
             float: none
